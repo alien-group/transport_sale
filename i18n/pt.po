@@ -1,0 +1,530 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_fleet_vehicle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140415-231321\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-09 14:07+0000\n"
+"PO-Revision-Date: 2014-05-09 15:09+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0
+#: field:sale.order.fleet_vehicle,fleet_vehicle_id:0
+msgid "Vehicle"
+msgstr "Veículo"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Machine Carrier"
+msgstr "Porta Máquinas"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_manifest:0
+msgid "Document"
+msgstr "Documento"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Authorization Signature :"
+msgstr "Assinatura de Autorização:"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Arrival Date"
+msgstr "Data de Chegada"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,brand:0 report:sale.order.transport_manifest:0
+msgid "Brand"
+msgstr "Marca"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,sales_date:0
+msgid "Sales Date"
+msgstr "Data da Venda"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.model,name:sale_order_fleet_vehicle.model_sale_order_cargo
+msgid "Transport cargo from a sale order transport service"
+msgstr "Carga transportada do serviço de transporte da ordem de venda"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:135
+#: help:sale.order,delivery_date:0
+#, python-format
+msgid "Expected Transport start date."
+msgstr "Data expectável de início do transporte."
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Service Description"
+msgstr "Descrição do Serviço"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Nº"
+msgstr "Nº"
+
+#. module: sale_order_fleet_vehicle
+#: help:sale.order.fleet_vehicle,cargo_ids:0
+msgid "All sale order transported cargo"
+msgstr "Todas cargas transportadas na ordem de venda"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,sale_order_id:0
+#: field:sale.order.fleet_vehicle,sale_order_id:0
+msgid "Sale Order"
+msgstr "Ordem de Venda"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order,cargo_ids:0
+msgid "Cargo Manifest"
+msgstr "Manifesto da Carga"
+
+#. module: sale_order_fleet_vehicle
+#: field:fleet.vehicle,internal_number:0
+msgid "Internal Number"
+msgstr "Veículo Nº:"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:140
+#: help:sale.order,cargo_ids:0
+#, python-format
+msgid "All transported cargo manifest."
+msgstr "Manifesto de toda carga transportada"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.model,name:sale_order_fleet_vehicle.model_sale_order_fleet_vehicle
+msgid "All sales order and associated vehicles"
+msgstr "Todas Ordens de venda e veículos associados"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,trailer_license_plate:0
+#: report:sale.order.transport_order:0
+msgid "Trailer License Plate"
+msgstr "Matrícula do Atrelado"
+
+#. module: sale_order_fleet_vehicle
+#: view:fleet.vehicle:0 field:fleet.vehicle,is_trailer:0
+msgid "Is Trailer"
+msgstr "É Atrelado"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Departure Date"
+msgstr "Data de Partida"
+
+#. module: sale_order_fleet_vehicle
+#: help:sale.order.fleet_vehicle,return_date:0
+msgid "The expected date to finish all the transport"
+msgstr "Data expectável de término do transporte"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,cargo_docport:0
+msgid "Port Document"
+msgstr "Documento de Porte"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,cargo_ident:0 report:sale.order.transport_manifest:0
+msgid "Identification"
+msgstr "ID"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,sale_order_fleet_id:0
+msgid "Sale Order Vehicle"
+msgstr "Ordem de Venda do Veículo"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0 report:sale.order.transport_order:0
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Date :"
+msgstr "Data :"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order,fleet_vehicles_ids:0
+msgid "Transport Vehicles"
+msgstr "Veículos de Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Signature:____________________________________________"
+msgstr "Assinatura:____________________________________________"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Container Carrier"
+msgstr "Porta Contentores"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:137
+#: help:sale.order,return_date:0
+#, python-format
+msgid "Expected Transport finish date."
+msgstr "Data expectável de término do transporte."
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,license_plate:0
+#: report:sale.order.transport_order:0
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: sale_order_fleet_vehicle
+#: field:hr.employee,sales_order_ids:0
+msgid "Driver Sales"
+msgstr "Transportes do Motorista"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.model,name:sale_order_fleet_vehicle.model_hr_employee
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:101
+#: help:sale.order.cargo,cargo_ident:0
+#, python-format
+msgid "Identification of the cargo.Ex:Id,License Plate,Chassi"
+msgstr "Identificação da carga.Ex: Id, Matrícula,Chassi, Num Série"
+
+#. module: sale_order_fleet_vehicle
+#: help:sale.order.fleet_vehicle,delivery_date:0
+msgid "The date that will start to transport"
+msgstr "Data que irá iniciar o transporte."
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,transport_date:0
+msgid "Transport Date"
+msgstr "Data do Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Date Ordered"
+msgstr "Data da Ordem"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "______/_______/______"
+msgstr "______/_______/______"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Driver Signature :"
+msgstr "Assinatura do Motorista"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:99
+#: help:sale.order.cargo,model:0
+#, python-format
+msgid "Model of the transported product if applicable."
+msgstr "Modelo do produtos transportado se aplicavél."
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Date: _____/_______/______"
+msgstr "Data: _____/_______/______"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.model,name:sale_order_fleet_vehicle.model_sale_order
+msgid "Sales Order"
+msgstr "Ordem de venda"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.actions.report.xml,name:sale_order_fleet_vehicle.sale_order_transport_order
+msgid "Transport Order"
+msgstr "Ordem de Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Quotation Date"
+msgstr "Data da Cotação"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,delivery_date:0
+msgid "Delivery Date"
+msgstr "Data de Entrega"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:228
+#, python-format
+msgid ""
+"Product:%s\n"
+"\tOrder=%s vs Cargo=%s\n"
+msgstr ""
+"Produto:%s\n"
+"\tOrdem=%s vs Carga=%s\n"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0
+msgid "Sale and Transport Dates"
+msgstr "Data de Venda e Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:97
+#: help:sale.order.cargo,brand:0
+#, python-format
+msgid "Brand of the transported product if applicable."
+msgstr "Marca da carga transportada se aplicável."
+
+#. module: sale_order_fleet_vehicle
+#: view:fleet.vehicle:0
+msgid "Mark this if the vehicle is a trailer"
+msgstr "Marque se o veículo é um atrelado"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Exit"
+msgstr "Saída"
+
+#. module: sale_order_fleet_vehicle
+#: field:fleet.vehicle,sales_order_ids:0
+msgid "Vehicle Sales"
+msgstr "Transporte dos Veículos"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:232
+#, python-format
+msgid ""
+"The following products quantities in cargo don't match\n"
+" quantities in sales order line:\n"
+"%s\n"
+"                                    "
+msgstr ""
+"A seguintes quantidades de serviços no manifesto não\n"
+"correspondem à quantidade na linha de ordem de venda:\n"
+"%s\n"
+"                                    "
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order:0 field:sale.order,partner_departure_id:0
+#: field:sale.order.cargo,transport_from_id:0
+#: field:sale.order.fleet_vehicle,partner_departure_id:0
+#: report:sale.order.transport_manifest:0 report:sale.order.transport_order:0
+msgid "From"
+msgstr "De"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0
+#: field:sale.order.fleet_vehicle,employee_driver_id:0
+msgid "Driver"
+msgstr "Motorista"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0
+msgid "Client Transport"
+msgstr "Transporte do Cliente"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_manifest:0
+msgid "Date"
+msgstr "Data"
+
+#. module: sale_order_fleet_vehicle
+#: view:hr.employee:0
+msgid "Transport Sales"
+msgstr "Venda de Transportes"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Client"
+msgstr "Cliente"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:235
+#, python-format
+msgid "Error"
+msgstr "Erro"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order.fleet_vehicle:0
+#: field:sale.order.fleet_vehicle,fleet_trailer_id:0
+msgid "Trailer"
+msgstr "Atrelado"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Quantity"
+msgstr "Quantidade"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Your Reference"
+msgstr "Referência"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:95
+#: help:sale.order.cargo,cargo_docport:0
+#, python-format
+msgid "Associated port document of the transported product if applicable."
+msgstr "Documento de porte associado ao produto transportado, se aplicável."
+
+#. module: sale_order_fleet_vehicle
+#: view:fleet.vehicle:0
+msgid "Transport sales"
+msgstr "Venda de Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: constraint:sale.order:0
+msgid "Error: Invalid return date"
+msgstr "Erro: Data Inválida de Retorno"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,internal_number:0
+msgid "Number"
+msgstr "Número"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order,return_date:0
+msgid "Transport Finish"
+msgstr "Fim do Tranporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Vehicle Identification"
+msgstr "Identificação do Veículo"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,cargo_product_id:0
+#: field:sale.order.fleet_vehicle,cargo_ids:0
+#: report:sale.order.transport_manifest:0
+msgid "Cargo"
+msgstr "Carga"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,employee_helper_id:0
+msgid "helper"
+msgstr "Ajudante"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order:0 field:sale.order.cargo,transport_to_id:0
+#: field:sale.order.fleet_vehicle,partner_destination_id:0
+#: report:sale.order.transport_manifest:0 report:sale.order.transport_order:0
+msgid "To"
+msgstr "Para"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order,delivery_date:0
+msgid "Transport Start"
+msgstr "Início do Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_manifest:0 report:sale.order.transport_order:0
+msgid "Transport Order N°"
+msgstr "Ordem de Transporte N°"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Date: _____"
+msgstr "Data: _____"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Tel. :"
+msgstr "Tel. :"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Car Carrier"
+msgstr "Porta Carros"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.fleet_vehicle,return_date:0
+msgid "Return Date"
+msgstr "Data de Retorno"
+
+#. module: sale_order_fleet_vehicle
+#: field:hr.employee,is_driver:0
+msgid "Is Driver"
+msgstr "É motorista"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Name"
+msgstr "Nome"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Driver Information"
+msgstr "Informação do Motorista"
+
+#. module: sale_order_fleet_vehicle
+#: constraint:sale.order:0
+msgid "Error: In products quantities"
+msgstr "Erro: Na quantidade de serviços"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order:0 view:sale.order.fleet_vehicle:0
+#: report:sale.order.transport_manifest:0
+msgid "Manifest"
+msgstr "Manifesto"
+
+#. module: sale_order_fleet_vehicle
+#: view:sale.order:0
+msgid "Transport Information"
+msgstr "Informação de Transporte"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Door Log – Exit/Enter"
+msgstr "Registo de Entrada/Saída"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Enter"
+msgstr "Entrada"
+
+#. module: sale_order_fleet_vehicle
+#: field:sale.order.cargo,model:0 report:sale.order.transport_manifest:0
+msgid "Model"
+msgstr "Modelo"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "Time:__________:__________"
+msgstr "Hora:__________:__________"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.model,name:sale_order_fleet_vehicle.model_fleet_vehicle
+msgid "Information on a vehicle"
+msgstr "Informação de veículos"
+
+#. module: sale_order_fleet_vehicle
+#: code:addons/sale_order_fleet_vehicle/sale_order_fleet_vehicle.py:92
+#: help:sale.order.cargo,transport_date:0
+#, python-format
+msgid "The day when the product was transported."
+msgstr "Data que o carga foi transportada"
+
+#. module: sale_order_fleet_vehicle
+#: report:sale.order.transport_order:0
+msgid "/_______/______"
+msgstr "/_______/______"
+
+#. module: sale_order_fleet_vehicle
+#: constraint:sale.order:0
+msgid ""
+"Error: There is a cargo product that doesn't belongs to the sale order line!"
+msgstr ""
+"Erro: Existe diferença entre serviço(s) no manifesto e o(s) serviço(s) na "
+"linha de ordem de venda!"
+
+#. module: sale_order_fleet_vehicle
+#: model:ir.actions.report.xml,name:sale_order_fleet_vehicle.sale_order_transport_manifest
+msgid "Transport Manifest"
+msgstr "Manifesto de Transporte"

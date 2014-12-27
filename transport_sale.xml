@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<!-- Sale Order Fleet Vehicle View -->
+		<record model="ir.ui.view" id="sale_order_fleet_vehicle_form_view">
+			<field name="name">Sale Order Fleet Vehicle Form View</field>
+			<field name="model">sale.order.fleet_vehicle</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Transport" version="7.0">
+					<group colspan="4" col="4">
+						<group colspan="2" string="Vehicle">							
+							<field name="fleet_vehicle_id" required="1" domain="[('is_trailer','=',0)]" on_change="fleet_vehicle_id_change(fleet_vehicle_id,context)"  />
+							<field name="internal_number"  />
+							<field name="license_plate" />
+						</group>
+						<group colspan="2" string="Driver">
+							<field name="employee_driver_id" domain="[('is_driver','=', 1)]" required="1" />
+							<field name="employee_helper_id" required="0" />
+						</group>
+						<group colspan="2" string="Trailer">
+							<field name="fleet_trailer_id" domain="[('is_trailer','=',1)]"
+							on_change="fleet_trailer_id_change(fleet_trailer_id)" />
+							<field name="trailer_license_plate" />
+						</group>						
+						<group colspan="2" string="Client Transport" > 						
+								<field name="partner_departure_id" />
+								<field name="partner_destination_id" />							
+						</group>
+						<group colspan="6" col="6" string="Sale and Transport Dates">
+								<field name="sales_date"/>
+								<field name="delivery_date" />
+								<field name="return_date" />
+						</group>
+					</group>
+					<group col="4" string="Manifest">
+						<field name="cargo_ids" required="1" nolabel="1"
+							context="{'sale_order_id':sale_order_id}">
+							<tree editable="bottom">
+								<field name="sale_order_id" invisible="1"/>
+								<field name="cargo_product_id" domain="[('type','=','service')]" on_change="cargo_id_change(cargo_product_id,context)"/>
+								<field name="cargo_ident"/>
+								<field name="cargo_docport"/>
+								<field name="brand"/>
+								<field name="model"/>															
+								<field name="transport_from_id"/>
+								<field name="transport_to_id"/>	
+								<field name="transport_date"/>
+							</tree>
+						</field>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<!--Sales order Vehicle form -->
+		<record model="ir.ui.view" id="inherited_sale_order_form_view">
+			<field name="name">Inherited Sale Order Form View</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_invoice_id']" position="after">
+					<field name="partner_departure_id" string="From"
+						context="{'search_default_customer':1, 'show_address': 1}"
+						required="1" attrs="{'readonly': [('state','in',['done','cancel'])]}" />
+				</xpath>
+				<xpath expr="//field[@name='partner_shipping_id']" position="replace">
+					<field name="partner_shipping_id" string="To"
+						context="{'search_default_customer':1, 'show_address': 1}"
+						required="1" attrs="{'readonly': [('state','in',['done','cancel'])]}" />
+				</xpath>
+				<xpath expr="//field[@name='client_order_ref']" position="after">
+					<field name="delivery_date"
+						attrs="{'readonly': [('state','in',['done','cancel'])]}" />
+					<field name="return_date"
+						attrs="{'readonly': [('state','in',['done','cancel'])]}" />
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[@string='Order Lines']"
+					position="after">
+					<page string="Transport Information">
+						<field name="fleet_vehicles_ids"
+							context="{'sale_order_id':active_id,
+						    'search_default_customer':1, 
+						    'show_address': 1,}"
+							attrs="{'required':[('state','in',['progress','manual','done'])]}">
+							<tree>
+								<field name="fleet_vehicle_id"/>
+								<field name="internal_number" />
+								<field name="license_plate" />
+								<field name="employee_driver_id" />
+								<field name="employee_helper_id" />
+								<field name="fleet_trailer_id"/>
+								<field name="trailer_license_plate" />
+								<field name="sale_order_id" invisible="1" />
+								<field name="sales_date" invisible="1" />
+								<field name="partner_departure_id" invisible="1" />
+								<field name="partner_destination_id" invisible="1" />
+								<field name="delivery_date" invisible="1" />
+								<field name="return_date" invisible="1" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[@string='Transport Information']"
+					position="after">
+					<page string="Manifest">
+						<field name="cargo_ids" readonly="1">
+							<tree nolabel="1" >
+								<field name="cargo_product_id"/>
+								<field name="cargo_ident"/>
+								<field name="cargo_docport"/>
+								<field name="brand"/>
+								<field name="model"/>
+								<field name="transport_from_id"/>
+								<field name="transport_to_id"/>								
+								<field name="transport_date"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Fleet vehicle sales form -->
+		<record model="ir.ui.view" id="inherited_fleet_vehicle_form_view">
+			<field name="name">Inherited Fleet Vehicle Form</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//label[@for='tag_ids']" position="before">
+					  <label for="internal_number" class="oe_edit_only"/>					   
+					<h2>
+						<field name="internal_number" class="oe_inline" />												
+					</h2>
+					 <label for="is_trailer" class="oe_edit_only"/>					
+					 <field name="is_trailer" string="Is Trailer" 
+						help="Mark this if the vehicle is a trailer"/>
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[@string='General Properties']"
+					position="after">
+					<page string="Transport sales">
+						<field name="sales_order_ids" readonly="1">
+							<tree editable="bottom">
+								<field name="sale_order_id" />
+								<field name="sales_date" />
+								<field name="partner_departure_id" />
+								<field name="partner_destination_id" />
+								<field name="delivery_date" />
+								<field name="return_date" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="inherited_employee_form_view">
+			<field name="name">Inherited Employee Form View</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_form" />
+			<field name="arch" type="xml">
+			<xpath expr="//field[@name='coach_id']"
+					position="after">
+					<field name="is_driver"/>
+			</xpath>		
+				<xpath expr="/form/sheet/notebook/page[@string='Personal Information']"
+					position="after">
+					<page string="Transport Sales">
+						<field name="sales_order_ids" readonly="1">
+							<tree editable="bottom">
+								<field name="sale_order_id" />
+								<field name="sales_date" />
+								<field name="partner_departure_id" />
+								<field name="partner_destination_id" />
+								<field name="delivery_date" />
+								<field name="return_date" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<report id="sale_order_transport_order" model="sale.order"
+			name="sale.order.transport_order" rml="sale_order_fleet_vehicle/report/transport_order.rml"
+			string="Transport Order" />
+				
+		<report id="sale_order_transport_manifest" model="sale.order"
+			name="sale.order.transport_manifest" rml="sale_order_fleet_vehicle/report/transport_manifest.rml"
+			string="Transport Manifest" />
+	</data>
+</openerp>
